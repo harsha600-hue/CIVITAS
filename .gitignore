@@ -1,0 +1,10 @@
+uploads/
+backend/uploads/
+
+# Environment secrets
+.env
+
+# Generated files
+backend/target/
+frontend/node_modules/
+frontend/dist/

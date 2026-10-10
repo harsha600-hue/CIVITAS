@@ -1,0 +1,14 @@
+server.port: 8081
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/civitas}
+    username: ${DB_USER:civitas}
+    password: ${DB_PASSWORD}
+  jpa: { hibernate.ddl-auto: validate, open-in-view: false }
+management.endpoints.web.exposure.include: health
+civitas:
+  upload-dir: ${UPLOAD_DIR:./uploads}
+  max-tickets-per-booking: ${MAX_TICKETS:6}
+
+spring.servlet.multipart.max-file-size: 5MB
+spring.servlet.multipart.max-request-size: 6MB
